@@ -35,7 +35,7 @@ pip install git+https://github.com/openai/CLIP.git
 
 ## 🖼️ VQGAN-CLIP ✨
 
-<p align='center'><img src='../asset/vqgan.gif?raw=1' width = '1100' ></p>
+<p align='center'><img src='asset/vqgan.gif?raw=1' width = '1100' ></p>
 
 ```
 # install python packages
