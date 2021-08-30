@@ -14,6 +14,7 @@ streamlit run app.py --server.address 0.0.0.0 --server.port [your port]
 <p align="center">
     <img src='asset/main.gif?raw=1' width = '900' >
 </p>
+
 ## 💸 Stock Price Dashboard ✨
 
 ```
