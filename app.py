@@ -315,4 +315,76 @@ curl -L -o checkpoints/vqgan_imagenet_f16_16384.ckpt -C - 'https://heibox.uni-he
 
     st.video('./asset/vqgan.mp4')
 
+st.markdown('---')
+st.header('Streamlit API reference')
+st.markdown('')
+st.markdown('''
+**📒 Useful resource**
+- [`streamlit.io`](https://docs.streamlit.io/)
+- [`awesome-streamlit`](https://github.com/MarcSkovMadsen/awesome-streamlit)
+- [`streamlit gallery`](https://streamlit.io/gallery)
+- [`Python Streamlit 사용법 - 프로토타입 만들기`](https://zzsza.github.io/mlops/2021/02/07/python-streamlit-dashboard/)
+
+''')
+
+
+with st.expander('Write'):
+    # st.title('title')
+    # st.header('header')
+    # st.subheader('subheader')
+    # st.write('write')
+
+    st.markdown('''
+    # title
+    ## header
+    ### subheader
+    write
+    ''')
+    st.code('''
+st.title('title')
+st.header('header')
+st.subheader('subheader')
+st.write('write')
+''')
+
+with st.expander('Widget'):
+    st.button('button')
+    st.checkbox('checkbox')
+    st.slider('slider', min_value=0, max_value=10, value=3, step=1)
+    select = st.selectbox('selectbox', ['a', 'b', 'c'])
+    st.write(f'select result: {select}')
+    multiselect= st.multiselect('multiselect', ['a', 'b', 'c', 'd'])
+    st.write(f'multiselect result: {multiselect}')
+
+    st.code('''
+st.button('button')
+st.checkbox('checkbox')
+st.slider('slider', min_value=0, max_value=10, value=3, step=1)
+select = st.selectbox('selectbox', ['a', 'b', 'c'])
+st.write(f'select result: {select}')
+multiselect= st.multiselect('multiselect', ['a', 'b', 'c', 'd'])
+st.write(f'multiselect result: {multiselect}')
+''')
+
+with st.expander('Input Data'):
+    st.code('''
+st.text_input(value)
+st.text_input(label, value, type="password")
+st.number_input(label, value)
+st.text_area(label, value)
+st.date_input(label, value)
+st.time_input(label, value)
+''')
+
+with st.expander('Message'):
+    st.info('info')
+    st.error('error')
+    st.warning('warning')
+    st.success('success')
+    st.code('''
+st.info('info')
+st.error('error')
+st.warning('warning')
+st.success('success')
+    ''')
 cs_body()
