@@ -65,6 +65,7 @@ if __name__ == '__main__':
     open_colab = col1.button("🚀 Open in Colab")  # logic handled further down
     open_github = col2.button("💻 Github")  # logic handled further down
     open_arxiv = col3.button("📒 Arxiv")  # logic handled further down
+    
     if open_colab:
         utils.open_link('https://colab.research.google.com/github/happy-jihye/Cartoon-StyleGan2/blob/main/Cartoon_StyleGAN2.ipynb')
     if open_github:
@@ -91,6 +92,7 @@ if __name__ == '__main__':
         else:
             utils.download_pretrained_model(False, file=f"{network}.pt", path='./networks')
             st.success(f"{network} Checkpoint Download Complete! ")
+
 
     st.markdown('---')
     st.header('2. Generate Images using Pretrained model !🙃')
@@ -151,7 +153,7 @@ if __name__ == '__main__':
 
 
     col1, col2, col3 = st.columns(3)
-    button3 = col2.button("Make Interpolatino Video")
+    button3 = col2.button("Make Interpolation Video")
     if button3:
         from utils import make_interpolation_video
         make_interpolation_video(st.session_state.g1, st.session_state.g2, st.session_state.g3, st.session_state.g4, number_of_img, number_of_step, swap, swap_layer_num)
@@ -163,7 +165,6 @@ if __name__ == '__main__':
         ### Result
         I trained the model with a naver webtoon dataset that didn't align. Models trained with naver webtoon dataset may have worse results than disney or metface dataset.
         ''')
-
         st.video(f'./asset/result.mp4')
 
     # --------------------------------
@@ -287,7 +288,7 @@ if __name__ == '__main__':
         index = st.slider('index', 0, 512, value=7, step=1)
 
     with col2:
-        degree = st.slider('mixing layer', 0, 30, value=14, step=1)
+        degree = st.slider('degree', 0, 30, value=14, step=1)
     
     col1, col2, col3 = st.columns([3,2,2])
     button5 = col2.button('Ok 🤗')

@@ -264,6 +264,10 @@ st.set_page_config(
 
 st.title('Streamlit Tutorial')
 st.markdown('')
+st.markdown('''
+- developped by [`@happy-jihye`](https://github.com/happy-jihye)
+- [`Github 💻 streamlit-tutorial`](https://github.com/happy-jihye/Streamlit-Tutorial)
+''')
 st.info('Streamlit is an open-source python framework for building web apps for Machine Learning and Data Science. We can instantly develop web apps and deploy them easily using Streamlit. Streamlit allows you to write an app the same way you write a python code. Streamlit makes it seamless to work on the interactive loop of coding and viewing results in the web app.')
 
 st.header('Streamlit Gallery 🖼️')
@@ -328,11 +332,16 @@ st.markdown('''
 ''')
 
 
+
+
+st.code('import streamlit as st')
+
 with st.expander('Write'):
-    # st.title('title')
-    # st.header('header')
-    # st.subheader('subheader')
-    # st.write('write')
+    st.title('title')
+    st.header('header')
+    st.subheader('subheader')
+    st.write('write')
+
 
     st.markdown('''
     # title
@@ -340,6 +349,7 @@ with st.expander('Write'):
     ### subheader
     write
     ''')
+    
     st.code('''
 st.title('title')
 st.header('header')
@@ -347,12 +357,15 @@ st.subheader('subheader')
 st.write('write')
 ''')
 
+
 with st.expander('Widget'):
     st.button('button')
     st.checkbox('checkbox')
     st.slider('slider', min_value=0, max_value=10, value=3, step=1)
+    
     select = st.selectbox('selectbox', ['a', 'b', 'c'])
     st.write(f'select result: {select}')
+
     multiselect= st.multiselect('multiselect', ['a', 'b', 'c', 'd'])
     st.write(f'multiselect result: {multiselect}')
 
