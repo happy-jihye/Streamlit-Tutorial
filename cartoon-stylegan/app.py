@@ -5,7 +5,7 @@ import torch
 import utils
 
 import streamlit as st
-from streamlit.report_thread import REPORT_CONTEXT_ATTR_NAME
+from streamlit.script_run_context import SCRIPT_RUN_CONTEXT_ATTR_NAME
 
 from contextlib import contextmanager
 from threading import current_thread
